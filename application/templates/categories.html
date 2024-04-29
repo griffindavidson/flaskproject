@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}Categories - Inventory Management Dashboard{% endblock %}
+
+{% block content %}
+<h2>Categories Overview</h2>
+<table class="category-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Number of Products</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Sample Category Row -->
+        <tr>
+            <td>1</td>
+            <td>Electronics</td>
+            <td>Devices and gadgets</td>
+            <td>150</td>
+        </tr>
+        <!-- Additional category rows can be dynamically generated from a database -->
+    </tbody>
+</table>
+
+<!-- Inserting an image in the middle of the page -->
+<div class="category-image-container">
+    <img src="{{ url_for('static', filename='images/categories_image.png') }}" alt="Category Image" class="category-image">
+</div>
+{% endblock %}
